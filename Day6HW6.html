@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Blog Section</title>
+    <style>
+        body{
+            font-size:medium;
+        }
+        .exb{
+            background-color: lightpink;
+            text-align: center;
+            font-style: italic;
+        }
+
+ /* --- 2. Attribute Selector: Links starting with "https" --- */
+        /* This rule targets only <a> tags whose href attribute value begins with "https" */
+        a[href^="https"]{
+            color: red;
+            font-weight: lighter;
+        }
+
+img{
+    border-radius:0px 8%;
+    
+}
+
+section{
+    background-color:hsl(177, 59%, 86%);
+    max-width:1000px;
+    padding: 40px;
+    border-radius: 8px;
+    margin-left: 5%;
+    margin-top: 5%;
+    display:inline-flex;
+}
+
+   /*  layout adjusts for:
+   Small screens (max-width: 600px): */
+   @media only screen and (max-width: 600px) {
+    body{
+        font-size: xx-small;
+       
+    
+   }
+
+   section{
+    display:block;
+    max-width: 90%;
+   }
+
+   div{
+    display: block;
+    margin:auto;
+   }
+article{
+    display: block;
+    margin:auto;}
+}
+
+
+    /* Change background color to lightyellow in portrait mode */
+   @media only screen and (orientation: portrait) {
+    body{
+        background-color: #f2f0cc;
+    
+
+    }
+
+
+    
+   }
+
+   .a{
+    min-width:280px;
+    max-width: 900px;
+    border-radius: 8px;
+    background-color:#ededeb;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1 px solid #ddd;
+   }
+
+
+   article{
+    display: inline-flex;
+    margin-right: 20px;
+
+   }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class = "exb">Resources for Humans</h1>
+    </header>
+
+<section>
+    <article>
+<div class ="a";>
+<h4>How to Rebuild Trust with an Employee?</h4>
+<img src="bossemployee.webp" alt="Trust between Boss and Employee" width="250" height="150">
+<p>Building trust with an employee requires consistent effort and genuine communication. 
+    Here are some suggestions: <a href="https://www.forbes.com/sites/forbescoachescouncil/2017/04/28/12-ways-managers-can-establish-a-trusting-relationship-with-employees/">
+        <strong>Read More</strong></a>
+</p>
+</div>
+    </article>
+
+<article>
+    <div class="a">
+<h4>How to give Fair Feedback to Women?</h4>
+<img src="women.jpg" alt="fair feedback to women" width="250" height="150">
+<p>To give fair feedback to women, focus on specific, observable behaviors 
+    instead of personality traits, and explain the impact of their actions. 
+<a href="https://www.taketheleadwomen.com/blog/give-take-making-feedback-women-fair-useful"><strong>Read More</strong></a>
+</p>
+    </div>
+</article>
+
+<article>
+<div class="a">
+<h4>How to take care of your team?: The Different Management Styles</h4>
+<img src="team.jpg" alt="Different Management Styles" width="250" height="150">
+<p>There’s no single “right” way to lead a team. 
+    The best managers adapt their style based on the situation, goals, and people involved.
+    <a href="https://www.forbes.com/advisor/business/management-styles/"><strong>Read More</strong></a>
+</p>
+</div>
+</article>
+
+</section>
+
+</body>
+</html>
