@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Blog Post Layout</title>
+    <style>
+     body
+     {
+       font-weight:100;
+     }
+      
+        h1{
+            text-align: center;
+        }
+
+
+        a{
+            color:white;
+        }
+        .bp{
+            background-color: hsl(239, 47%, 25%);
+             border: 1px solid #ddd;
+            border-radius: 8px;
+    
+            max-width: 900px;
+            height: 830px;
+            margin: auto;
+            
+        }
+
+        #wo{
+           
+            color: white;
+            padding: 10px;
+        }
+
+        .ps{
+            margin-top: 2em;
+            padding:15px 15px;
+            text-align: justify;
+            color: white;
+            font-style: normal;
+            font-size: 20px;
+            background-color: hsl(23, 94%, 43%);
+            max-width: 200%;
+            height: 15%
+           
+            
+         
+        }
+
+        .pps{
+            margin:2em;
+            text-align: justify;
+            color: black;
+            font-style: normal;
+            font-size: 20px;
+            background-color: white;
+            max-width: 200%;
+            height: 30%;
+        }
+        
+        .pos{
+            float: right;
+            clear: right;
+        }
+
+
+.hc{
+
+    float: left; 
+            width: 50%; /* Each takes half the width */
+            box-sizing: border-box; /* Includes padding in the width calculation */
+            margin: 0;
+            padding: 15px;
+            color: white;
+
+}
+
+blockquote::before{
+    content: "“"; /* The opening quote character */
+            font-size: 3em;
+            color: #1b1717;
+            
+            /* Float: Using align-items to position the quote */
+          align-items:left;
+           
+            line-height: 1;
+            margin-right: 10px;
+}
+
+
+        /* 11. Style the second h4 using the adjacent sibling selector (+) */
+         h4 + h4 {
+            background-color: #373735;
+            
+            border: 1px solid #ccc;
+        }
+
+         /*Use of anchor pseudo-classes to show different styles for normal, visited, and hovered links */
+         a:link{
+            color: rgb(235, 192, 226);
+            text-decoration: none;
+
+         }
+
+         a:visited{
+            color: white;
+         }
+
+            a:hover{
+                color: yellow;
+                text-decoration: underline;
+            }
+   /* Make the first letter larger and colored */
+           .ps p::first-letter{
+            font-size: xx-large;
+            color: yellow;
+            }
+
+ /*  Style the first line to be bold */
+        .ps p::first-line{
+            font-weight: bold;
+          
+            
+            /* Using overflow to contain the floated pseudo-element */
+            overflow: auto; 
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="bp">
+        
+         
+            <h1 id = wo>First Blog Post Ideas</h1>
+       
+        
+        <p style="font-style:italic; text-align: center; color: white;">by Devi Rajmohan</p>
+
+        <div class ="ps">
+        <p>As a blog writer, I see good and bad blog format examples every day.
+While I like to think that the content is the only thing that draws people to a blog post and 
+keeps them reading, I know that the layout and blog format also play a huge factor.</p>
+    </div>
+
+    <div class="pps">
+       <blockquote>Drive traffic and awareness by creating an SEO-friendly blog for your business.
+        Save time creating blog posts with these free templates:
+<ul type = "circle">
+<li>"How-to" Post</li>
+<li>"What is" Post</li>
+<li>Listicle Post</li>
+<li>And More!</li>
+</ul>
+</blockquote>
+</div>
+
+<div class="ps">
+    <p>
+    <h4 class="hc"><a href="https://offers.hubspot.com/blog-post-templates?hubs_signup-url=blog.hubspot.com/marketing/how-to-start-a-blog&hubs_signup-cta=-learn-more-text&hubs_post=blog.hubspot.com/marketing/how-to-start-a-blog&hubs_post-cta=">
+        Learn More</a></h4>
+    <h4 class="hc">
+        <a href="https://blog.hubspot.com/blog/tabid/6307/bid/34143/12-inspiring-examples-of-beautiful-blog-homepage-designs.aspx">
+            Get Your Free Templates</a></h4>
+    </p>
+    </div>
+
+</body>
+</html>
