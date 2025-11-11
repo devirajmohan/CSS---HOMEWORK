@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Base styles using topics: Fonts, Margins, Padding */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Req 1: Restaurant Name (h3) Styling 
+          Using properties from: Text, Fonts, Margins
+        */
+        .restaurant-name {
+            /* 'text-align' is from the Text topic */
+            text-align: right;
+            /* 'font-family', 'font-size' are from the Fonts topic */
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            /* 'color' is from the Text topic */
+            color: #a52a2a; /* A brownish-red */
+         
+            margin-right: 20px; 
+        }
+
+        /* Req 5: Styling for the Icons 
+          Using properties from: Margins
+        */
+        .restaurant-name i {
+         
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        /* Req 2: Welcome Message Styling
+          Using properties from: Text, Margins
+        */
+        .welcome-message {
+            /* 'text-align' is from the Text topic */
+            text-align: center;
+            /* 'text-transform' is from the Text topic */
+            text-transform: uppercase;
+            /* 'letter-spacing' and 'word-spacing' are from the Text topic */
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            /* 'margin' is from the Margins topic */
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Req 3: Table Styling (the main table)
+          Using properties from: Width & Height, Tables, Margins
+        */
+        .menu-table {
+            /* 'width' is from the Width & Height topic */
+            width: 60%;
+            /* 'border-collapse' is from the Tables topic */
+            border-collapse: collapse;
+            /* Centering the table using margin auto (Margins topic) */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Req 3: Table Cell Styling (headers and data)
+          Using properties from: Box Model (border), Padding, Text, Tables
+        */
+        .menu-table th, .menu-table td {
+            /* 'border' is part of the Box Model topic */
+            border: 1px solid #777;
+            /* 'padding' is from the Padding topic */
+            padding: 12px;
+            /* 'text-align' is from the Text topic */
+            text-align: center;
+            /* 'vertical-align' is from the Tables topic */
+            vertical-align: middle;
+        }
+
+        /* Styling the table header row slightly differently (Fonts, Text) */
+        .menu-table th {
+            background-color: #f0f0f0;
+            font-size: 18px;
+        }
+
+        /* Req 4: Link Styling (targets all <a> tags)
+          Using properties from: Links, Text
+        */
+        a {
+            /* 'text-decoration' is from the Text topic */
+            text-decoration: none; /* Removes the underline */
+            /* 'color' is from the Text topic */
+            color: #007bff;
+        }
+
+        /* Req 4: Link hover state */
+        a:hover {
+            color: #d9534f; /* Changes color on hover */
+        }
+
+        /* A simple class to center the footer link */
+        .footer-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3 class="restaurant-name">
+        <i class="fas fa-utensils"></i> The Savory Spoon
+        <i class="fas fa-mug-hot"></i> </h3>
+
+    <p class="welcome-message">
+        Welcome to our kitchen!
+    </p>
+
+    <table class="menu-table">
+        <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Spaghetti Carbonara</td>
+                <td>₹450</td>
+            </tr>
+            <tr>
+                <td>Grilled Chicken Salad</td>
+                <td>₹380</td>
+            </tr>
+            <tr>
+                <td>Margherita Pizza</td>
+                <td>₹420</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="footer-link">
+        See our <a href="#">full gallery</a>.
+    </p>
+
+</body>
+</html>
