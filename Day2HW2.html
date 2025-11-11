@@ -1,0 +1,90 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        /* *  box-sizing: border-box; to make the Box Model simpler.
+         * This ensures that the 'width' and 'height' properties
+         * include the padding and border, not just the content.
+        */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            /* (From Fonts/Text topic) Set a simple font for readability */
+            font-family: sans-serif; 
+            background-color: #f4f4f4;
+        }
+
+        .product-card {
+            /* (From Width & Height topic) */
+            /* Set a fixed height as requested */
+            height: 400px; 
+            /* Set a width using a percentage*/
+            width: 25%; 
+
+            /* (From Box Model / Margins topic) */
+            /* Use 'margin' shorthand to set 20px of space on all sides */
+            margin: 20px;
+
+            /* (From Box Model / Padding topic) */
+            /* Use 'padding' shorthand to set 15px of space inside the card */
+            padding: 15px;
+
+            /* (From Box Model topic) */
+            /* Use 'border' shorthand to set width, style, and color */
+            border: 3px solid #cccccc;
+            /* Add rounded corners */
+            border-radius: 10px; 
+        }
+
+        .product-card img {
+            /* (From Width & Height topic) */
+            /* max-width: 100% makes the image responsive; it will never
+               be wider than its container (the card) */
+            max-width: 100%;
+
+            /* min-width: 200px ensures the image is never smaller
+               than 200px, as requested. */
+            min-width: 200px;
+            
+            /* Ensures the image scales proportionally */
+            height: auto; 
+        }
+
+        .product-card h2 {
+            /* (From Text topic) */
+            font-size: 22px;
+            color: #333333;
+        }
+
+        .product-card p {
+            /* (From Text/Fonts topic) */
+            font-size: 16px;
+            color: #555555;
+            line-height: 1.4; /* Improves readability */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-card">
+        
+        <img src="icecream.jpg" alt="Mercely's Ice Cream">
+
+        <h2>Mercely's Ice Cream</h2>
+
+        <p>This is <strong>Mercely's</strong> ice cream! Our brand offers ice creams that lures people together!
+            Our heart-warming ice cream flavours are both natural and healthy because <i>Mercely's</i> fosters healthy relationships!
+        </p>
+
+    </div>
+
+</body>
+</html>
