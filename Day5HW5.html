@@ -3,125 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyWay Travels - Home</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>A Simple Blog Post Layout</title>
+    <style>
+     body
+     {
+       font-weight:100;
+     }
+      
+        h1{
+            text-align: center;
+        }
+
+
+        a{
+            color:white;
+        }
+        .bp{
+            background-color: hsl(239, 47%, 25%);
+             border: 1px solid #ddd;
+            border-radius: 8px;
+    
+            max-width: 900px;
+            height: 830px;
+            margin: auto;
+            
+        }
+
+        #wo{
+           
+            color: white;
+            padding: 10px;
+        }
+
+        .ps{
+            margin-top: 2em;
+            padding:15px 15px;
+            text-align: justify;
+            color: white;
+            font-style: normal;
+            font-size: 20px;
+            background-color: hsl(23, 94%, 43%);
+            max-width: 200%;
+            height: 15%
+           
+            
+         
+        }
+
+        .pps{
+            margin:2em;
+            text-align: justify;
+            color: black;
+            font-style: normal;
+            font-size: 20px;
+            background-color: white;
+            max-width: 200%;
+            height: 30%;
+        }
+        
+        .pos{
+            float: right;
+            clear: right;
+        }
+
+
+.hc{
+
+    float: left; 
+            width: 50%; /* Each takes half the width */
+            box-sizing: border-box; /* Includes padding in the width calculation */
+            margin: 0;
+            padding: 15px;
+            color: white;
+
+}
+
+blockquote::before{
+    content: "“"; /* The opening quote character */
+            font-size: 3em;
+            color: #1b1717;
+            
+            /* Float: Using align-items to position the quote */
+          align-items:left;
+           
+            line-height: 1;
+            margin-right: 10px;
+}
+
+
+        /* 11. Style the second h4 using the adjacent sibling selector (+) */
+         h4 + h4 {
+            background-color: #373735;
+            
+            border: 1px solid #ccc;
+        }
+
+         /*Use of anchor pseudo-classes to show different styles for normal, visited, and hovered links */
+         a:link{
+            color: rgb(235, 192, 226);
+            text-decoration: none;
+
+         }
+
+         a:visited{
+            color: white;
+         }
+
+            a:hover{
+                color: yellow;
+                text-decoration: underline;
+            }
+   /* Make the first letter larger and colored */
+           .ps p::first-letter{
+            font-size: xx-large;
+            color: yellow;
+            }
+
+ /*  Style the first line to be bold */
+        .ps p::first-line{
+            font-weight: bold;
+          
+            
+            /* Using overflow to contain the floated pseudo-element */
+            overflow: auto; 
+        }
+
+    </style>
 </head>
-<body class="bg-light-subtle">
 
-    <!-- 
-      REQUIREMENT 1: Navbar
-      - .navbar: Defines the component
-      - .navbar-expand-lg: Makes it responsive (collapses on medium screens)
-      - .navbar-dark: Makes the text light, for dark backgrounds.
-      - .bg-primary: Sets a non-white background color (Bootstrap's default blue).
-    -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-        <div class="container">
-            <!-- Brand logo/name -->
-            <a class="navbar-brand fw-bold" href="#">SkyWay Travels</a>
-            
-            <!-- Toggler button for mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- 
-              REQUIREMENT 1.3: Center Navbar Content
-              - We apply .justify-content-center to the .navbar-collapse container.
-              - This centers its flex items (the .navbar-nav list) horizontally.
-            -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <!-- REQUIREMENT 1.1: Links -->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Destinations</a>
-                    </li>
-                    <!-- 
-                      REQUIREMENT 1.2: Disabled "Bookings" Link
-                      - The .disabled class visually disables the link and removes pointer events.
-                    -->
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bookings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- 
-      REQUIREMENT 2: Navigation Pills
-      - We wrap this in a .container for proper padding and alignment.
-      - .nav: Base class for navigation components.
-      - .nav-pills: Styles the links as "pills".
-      - .justify-content-center: Centers the pills horizontally.
-      - .py-4: Adds vertical padding (padding-top and padding-bottom) for spacing.
-    -->
-    <div class="container py-4">
-        <ul class="nav nav-pills justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Beach</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Mountain</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">City</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Adventure</a>
-            </li>
-        </ul>
+<body>
+    <div class="bp">
+        
+         
+            <h1 id = wo>First Blog Post Ideas</h1>
+       
+        
+        <p style="font-style:italic; text-align: center; color: white;">by Devi Rajmohan</p>
+
+        <div class ="ps">
+        <p>As a blog writer, I see good and bad blog format examples every day.
+While I like to think that the content is the only thing that draws people to a blog post and 
+keeps them reading, I know that the layout and blog format also play a huge factor.</p>
     </div>
 
-    <!-- 
-      REQUIREMENT 3: Vertical Nav (Simulated Sidebar)
-      - We use Bootstrap's Grid (.row, .col-md-3, .col-md-9) to create a sidebar/content split.
-      - .border-end: A simple Bootstrap utility to add a right border, enhancing the "sidebar" feel.
-    -->
-    <div class="container mt-4">
-        <div class="row">
-            <!-- Sidebar Column -->
-            <div class="col-md-3 border-end">
-                <h5 class="mb-3">Our Services</h5>
-                <!-- 
-                  - .nav: Base class.
-                  - .flex-column: Stacks the nav items vertically.
-                -->
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Offers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Packages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Support</a>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- Main Content Column -->
-            <div class="col-md-9">
-                <div class="p-3">
-                    <h2>Welcome to SkyWay Travels!</h2>
-                    <p class="lead">Your adventure starts here. Use the filters above to find your perfect destination or check out our special offers on the left.</p>
-                    <p>This is the main content area where information about destinations, bookings, or contact details would be displayed. The layout is fully responsive and will stack vertically on smaller screens.</p>
-                </div>
-            </div>
-        </div>
+    <div class="pps">
+       <blockquote>Drive traffic and awareness by creating an SEO-friendly blog for your business.
+        Save time creating blog posts with these free templates:
+<ul type = "circle">
+<li>"How-to" Post</li>
+<li>"What is" Post</li>
+<li>Listicle Post</li>
+<li>And More!</li>
+</ul>
+</blockquote>
+</div>
+
+<div class="ps">
+    <p>
+    <h4 class="hc"><a href="https://offers.hubspot.com/blog-post-templates?hubs_signup-url=blog.hubspot.com/marketing/how-to-start-a-blog&hubs_signup-cta=-learn-more-text&hubs_post=blog.hubspot.com/marketing/how-to-start-a-blog&hubs_post-cta=">
+        Learn More</a></h4>
+    <h4 class="hc">
+        <a href="https://blog.hubspot.com/blog/tabid/6307/bid/34143/12-inspiring-examples-of-beautiful-blog-homepage-designs.aspx">
+            Get Your Free Templates</a></h4>
+    </p>
     </div>
 
-    <!-- Bootstrap JS Bundle (includes Popper.js) - Needed for responsive navbar toggler -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

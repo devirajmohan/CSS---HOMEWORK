@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 
+    This is Internal CSS.
+    The styles are placed inside the <style> tag within the <head> section.
+  -->
+  <style>
+    /* CSS rule for the <body> element.
+      This sets a background-image for the entire page.
+     
+    */
+    body {
+      background-image: url("https://media.istockphoto.com/id/921736458/photo/backgrounds-vintage-soft-sky-with-sunlight.jpg?s=612x612&w=0&k=20&c=w0EmVlNJyZ0m36-HZKwUNcxz21sybH5xktWV--Vl0fw="); /* Requirement: Full page background image */
+      background-repeat: no-repeat;
+      background-attachment:scroll;
+        background-size: cover;
+      font-family: Arial, sans-serif; /* Added for better readability */
+      line-height: 1.6;
+    }
+
+    /* CSS rule for the <h1> element (the name).
+      This makes the text color a dark blue.
+    */
+    h1 {
+      color: #2c3e50; /* Requirement: Use at least three different colors (Color 1) */
+    }
+
+    /* CSS rule for elements with the class "bio".
+      This makes the bio text color a dark green.
+    */
+    .bio {
+      color: #27ae60; /* Requirement: Use at least three different colors (Color 2) */
+    }
+
+    /*
+      CSS rule for elements with the class "quote".
+      This makes the quote text color a dark red.
+      It also ensures the text is italic, as requested.
+    */
+    .quote {
+      color: #c0392b; /* Requirement: Use at least three different colors (Color 3) */
+      font-style: italic; /* Requirement: Favorite quote in italics */
+    }
+
+    /* A simple container to make the content look neat on the page.
+      This adds a white background to the content area, a border,
+      and some padding.
+    */
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #dddddd; /* Using the CSS border property */
+      border-radius: 8px; /* Added for a modern, rounded look */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Requirement: Add your name as a large heading -->
+    <h1>Devi Rajmohan</h1>
+
+    <!-- Requirement: Add a short paragraph about yourself -->
+    <p class="bio">
+      Hello! I'm a student with a passion for web development and design. 
+      I enjoy learning new technologies, reading fantasy novels, and cycling
+      on weekends.</p>
+      <p>
+      <p class="bio">Currently, I'm enrolled in a full stack Python React course. 
+      It is a certification course offered by Mashupstack.
+    </p>
+
+    <!-- Requirement: Add a favorite quote in italics -->
+    <p class="quote">
+      "The best way to predict the future is to create it."
+    </p>
+
+  </div>
+
+</body>
+</html>

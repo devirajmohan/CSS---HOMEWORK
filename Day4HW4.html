@@ -3,176 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Bakery Products</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Contact Card Webpage</title>
     <style>
-        /* This page uses only Bootstrap classes for styling. No custom CSS is needed. */
-        body {
-            background-color: #f8f9fa; /* A standard Bootstrap background color class could be used, but this is simpler for the body */
+        body{
+            margin: 0;
+            padding: 0;
+            height: 1500px;
+            font-family: Arial, sans-serif;
+            background-color: #f3f2f2;
         }
+        header{
+            top:0;
+            position:fixed;
+            background-color: white;
+            color: rgb(13, 172, 221);
+            text-align: center;
+            width: 100%;
+            padding-bottom: 60px;
+            font-size: large;
+            font-family: sans-serif;
+            
+            height: 5%;
+            z-index: 10;
+        }
+
+        .a{ overflow:auto;
+            margin-top: 200px;
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 70%;
+            height:auto;
+            max-width: 900px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            overflow: auto;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .b{
+           
+            top: 20px;
+            right: 20px;
+            width: 50%;
+            border: 1px solid #ccc;
+           
+            padding: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+            overflow: auto;
+        }
+
+        .c{
+            overflow:auto;
+            position: absolute;
+            border-radius: 12px;
+            top: 100px;
+            right: 20px;
+            width: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+            border-left: 4px solid rgb(13, 172, 221);}
+           
+        
     </style>
 </head>
 <body>
+    
+    <header>
+        <h1>Company Contact Card</h1>
+    </header>
 
-    <!-- Main Container -->
-    <div class="container my-5">
+<div class="a">
+    <img src="Headshot 3.jpg" alt="Profile Picture" style="float: left; width: 150px; height: 150px; margin: 20px;">
+    <div class="b">
+        <h2>Devi Rajmohan</h2>
+        <p>Position: Designer-Architect</p>
+        <p>Company: Alphabet Inc.</p>
+        <p> A key member of 
+            the development team for over 5 years, specializing in making:
+            concepts, Illustrations, prototypes ---
+            for best user experience on web and mobile applications.
+           
+        </p>
+        
+        
+    </div>
+</div>
 
-        <!-- 1. Product Features Section -->
-        <h2 class="text-center mb-4">Our Feature Products</h2>
-
-        <!-- Row to hold the 3 product cards -->
-        <div class="row">
-
-            <!-- Product Card 1 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <!-- Bootstrap Card Component -->
-                <div class="card h-100 shadow-sm">
-                    <img src="artisancake.jpg" class="card-img-top" alt="Artisan Cake">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Artisan Cakes</h5>
-                        <p class="card-text">Our custom-made artisan cakes are perfect for any celebration, big or small.</p>
-                        
-                        <!-- Buttons pushed to the bottom of the card -->
-                        <div class="mt-auto">
-                            <a href="#" class="btn btn-primary w-100 mb-2">Read More</a>
-                            
-                            <!-- Bootstrap Dropdown Component -->
-                            <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    More Options
-                                </button>
-                                <ul class="dropdown-menu w-100">
-                                    <li><a class="dropdown-item" href="#">Add to Wishlist</a></li>
-                                    <li><a class="dropdown-item" href="#">Compare</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Report</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Card 2 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <!-- Bootstrap Card Component -->
-                <div class="card h-100 shadow-sm">
-                    <img src="gourmetcookies.avif" class="card-img-top" alt="Gourmet Cookies">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Gourmet Cookies</h5>
-                        <p class="card-text">A dozen of our finest cookies, baked fresh daily with premium ingredients.</p>
-                        
-                        <!-- Buttons pushed to the bottom of the card -->
-                        <div class="mt-auto">
-                            <a href="#" class="btn btn-primary w-100 mb-2">Read More</a>
-
-                            <!-- Bootstrap Dropdown Component -->
-                            <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    More Options
-                                </button>
-                                <ul class="dropdown-menu w-100">
-                                    <li><a class="dropdown-item" href="#">Add to Wishlist</a></li>
-                                    <li><a class="dropdown-item" href="#">Compare</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Report</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Card 3 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <!-- Bootstrap Card Component -->
-                <div class="card h-100 shadow-sm">
-                    <img src="FrenchPastry.webp" class="card-img-top" alt="French Pastries">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">French Pastries</h5>
-                        <p class="card-text">An assortment of classic French pastries, including croissants and eclairs.</p>
-                        
-                        <!-- Buttons pushed to the bottom of the card -->
-                        <div class="mt-auto">
-                            <a href="#" class="btn btn-primary w-100 mb-2">Read More</a>
-
-                            <!-- Bootstrap Dropdown Component -->
-                            <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    More Options
-                                </button>
-                                <ul class="dropdown-menu w-100">
-                                    <li><a class="dropdown-item" href="#">Add to Wishlist</a></li>
-                                    <li><a class="dropdown-item" href="#">Compare</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Report</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- End of Row -->
-
-        <!-- 2. FAQ Accordion Section -->
-        <h2 class="text-center mt-5 mb-4">Frequently Asked Questions</h2>
-
-        <!-- Bootstrap Accordion (Collapse) Component -->
-        <!-- The "id" here is the parent container for the accordion items -->
-        <div class="accordion" id="faqAccordion">
-
-            <!-- FAQ Item 1 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <!-- The "data-bs-target" points to the ID of the content to be collapsed -->
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        FAQ #1: What are your shipping options?
-                    </button>
-                </h2>
-                <!-- The "id" must match the button's "data-bs-target" -->
-                <!-- The ".show" class makes this item open by default -->
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        We offer standard (3-5 business days) and express (1-2 business days) shipping. All our baked goods are carefully packaged to ensure they arrive fresh and intact.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Item 2 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        FAQ #2: Can I customize my order?
-                    </button>
-                </h2>
-                <!-- This item is collapsed by default (it lacks the ".show" class) -->
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Absolutely! For custom cake designs, flavors, or large orders, please contact us directly through our "Contact Us" page at least one week in advance. We do not offer customization for individual cookies or pastries at this time.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Item 3 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        FAQ #3: What is your return policy?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Due to the perishable nature of our products, we cannot accept returns. However, if you are unsatisfied with your order, please contact us within 24 hours of receiving it, and we will do our best to make it right.
-                    </div>
-                </div>
-            </div>
-
-        </div> <!-- End of Accordion -->
-
-    </div> <!-- End of Container -->
-
-    <!-- Bootstrap JS Bundle (REQUIRED for Dropdowns and Collapse/Accordion to work) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="c">
+    <p>Email: devatha19@gmail.com</p>
+        <p>Mob: +919456782387</p>
+</div>
 </body>
 </html>

@@ -3,102 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakery Feedback Form</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Featured Blog Section</title>
     <style>
-        /* A tiny bit of CSS to give the page a soft background color */
-        body {
-            background-color: #f8f9fa;
+        body{
+            font-size:medium;
         }
+        .exb{
+            background-color: lightpink;
+            text-align: center;
+            font-style: italic;
+        }
+
+ /* --- 2. Attribute Selector: Links starting with "https" --- */
+        /* This rule targets only <a> tags whose href attribute value begins with "https" */
+        a[href^="https"]{
+            color: red;
+            font-weight: lighter;
+        }
+
+img{
+    border-radius:0px 8%;
+    
+}
+
+section{
+    background-color:hsl(177, 59%, 86%);
+    max-width:1000px;
+    padding: 40px;
+    border-radius: 8px;
+    margin-left: 5%;
+    margin-top: 5%;
+    display:inline-flex;
+}
+
+   /*  layout adjusts for:
+   Small screens (max-width: 600px): */
+   @media only screen and (max-width: 600px) {
+    body{
+        font-size: xx-small;
+       
+    
+   }
+
+   section{
+    display:block;
+    max-width: 90%;
+   }
+
+   div{
+    display: block;
+    margin:auto;
+   }
+article{
+    display: block;
+    margin:auto;}
+}
+
+
+    /* Change background color to lightyellow in portrait mode */
+   @media only screen and (orientation: portrait) {
+    body{
+        background-color: #f2f0cc;
+    
+
+    }
+
+
+    
+   }
+
+   .a{
+    min-width:280px;
+    max-width: 900px;
+    border-radius: 8px;
+    background-color:#ededeb;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1 px solid #ddd;
+   }
+
+
+   article{
+    display: inline-flex;
+    margin-right: 20px;
+
+   }
+
     </style>
 </head>
 <body>
+    <header>
+        <h1 class = "exb">Resources for Humans</h1>
+    </header>
 
-    <div class="container my-5">
-        <div class="row">
-            <!-- Center the form and limit its width for readability -->
-            <div class="col-lg-7 col-md-10 mx-auto">
-                
-                <!-- Use a Bootstrap Card for a clean, contained look -->
-                <div class="card shadow-sm border-0 rounded-3">
-                    <div class="card-body p-4 p-md-5">
+<section>
+    <article>
+<div class ="a";>
+<h4>How to Rebuild Trust with an Employee?</h4>
+<img src="bossemployee.webp" alt="Trust between Boss and Employee" width="250" height="150">
+<p>Building trust with an employee requires consistent effort and genuine communication. 
+    Here are some suggestions: <a href="https://www.forbes.com/sites/forbescoachescouncil/2017/04/28/12-ways-managers-can-establish-a-trusting-relationship-with-employees/">
+        <strong>Read More</strong></a>
+</p>
+</div>
+    </article>
 
-                        <h2 class="card-title text-center mb-3">Feedback Form</h2>
-                        <p class="card-subtitle text-center text-muted mb-4">We'd love to hear about your order!</p>
-
-                        <!-- Start of the Form -->
-                        <!-- The action="#" is a placeholder. This would point to a server script. -->
-                        <form action="#" method="POST">
-
-                            <!-- 1. Customer Name -->
-                            <div class="mb-3">
-                                <label for="customerName" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="customerName" placeholder="e.g., Jane Doe" required>
-                            </div>
-
-                            <!-- 2. Email -->
-                            <div class="mb-3">
-                                <label for="customerEmail" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="customerEmail" placeholder="you@example.com" required>
-                            </div>
-
-                            <!-- 3. Type of Order (Dropdown) -->
-                            <div class="mb-3">
-                                <label for="orderType" class="form-label">What did you order?</label>
-                                <!-- Use "form-select" for a Bootstrap-styled dropdown -->
-                                <select class="form-select" id="orderType" required>
-                                    <option value="" selected disabled>-- Please choose an option --</option>
-                                    <option value="cake">Cake</option>
-                                    <option value="cookies">Cookies</option>
-                                    <option value="pastries">Pastries</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-
-                            <!-- 4. Satisfaction Level (Range) -->
-                            <div class="mb-3">
-                                <label for="satisfactionLevel" class="form-label">Satisfaction Level (1=Bad, 10=Great!)</label>
-                                <!-- Use "form-range" for a Bootstrap-styled slider -->
-                                <input type="range" class="form-range" id="satisfactionLevel" min="1" max="10" step="1" value="8">
-                            </div>
-                            
-                            <!-- 5. Feedback Message -->
-                            <div class="mb-3">
-                                <label for="feedbackMessage" class="form-label">Your Feedback</label>
-                                <textarea class="form-control" id="feedbackMessage" rows="5" placeholder="Tell us about your experience..." required></textarea>
-                            </div>
-
-                            <!-- 6. Preferred Contact Method (Radios) -->
-                            <div class="mb-3">
-                                <label class="form-label d-block">Preferred Contact Method</label>
-                                <!-- "form-check-inline" makes the radio buttons sit side-by-side -->
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail" value="email" checked>
-                                    <label class="form-check-label" for="contactEmail">Email</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="contactMethod" id="contactPhone" value="phone">
-                                    <label class="form-check-label" for="contactPhone">Phone</label>
-                                </div>
-                            </div>
-
-                            <!-- 7. Submit Button -->
-                            <!-- "d-grid" makes the button inside expand to full width -->
-                            <div class="d-grid pt-3">
-                                <button type="submit" class="btn btn-primary btn-lg">Submit Feedback</button>
-                            </div>
-
-                        </form>
-                        <!-- End of Form -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
+<article>
+    <div class="a">
+<h4>How to give Fair Feedback to Women?</h4>
+<img src="women.jpg" alt="fair feedback to women" width="250" height="150">
+<p>To give fair feedback to women, focus on specific, observable behaviors 
+    instead of personality traits, and explain the impact of their actions. 
+<a href="https://www.taketheleadwomen.com/blog/give-take-making-feedback-women-fair-useful"><strong>Read More</strong></a>
+</p>
     </div>
+</article>
 
-    <!-- Bootstrap JS Bundle (optional, but good practice for some components) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<article>
+<div class="a">
+<h4>How to take care of your team?: The Different Management Styles</h4>
+<img src="team.jpg" alt="Different Management Styles" width="250" height="150">
+<p>There’s no single “right” way to lead a team. 
+    The best managers adapt their style based on the situation, goals, and people involved.
+    <a href="https://www.forbes.com/advisor/business/management-styles/"><strong>Read More</strong></a>
+</p>
+</div>
+</article>
+
+</section>
+
 </body>
 </html>
